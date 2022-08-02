@@ -1,6 +1,9 @@
 def list_sum(arr):
-    sum=sum+list_sum(arr[i])
-    return sum
+    if len(arr)==1:
+        return arr[0]
+    else:
+        return arr[0] + list_sum(arr[1:])
 
-arr=[1,2,3,4,5]
+
+arr=[10]
 print(list_sum(arr))
